@@ -1,0 +1,14 @@
+Setup steps:
+
+1. Install python3
+2. Install pip
+3. pip install -r requirements.txt
+4. run postgres server via docker:
+sudo docker run --name appsforcedb -e POSTGRES_PASSWORD=pass1234 --restart=always -d -p 5432:5432 postgres:15.2
+
+
+Browse to http://localhost:8000
+
+Loading fixtures:
+python manage.py loaddata data_api/fixtures/department.json
+python manage.py loaddata data_api/fixtures/user.json

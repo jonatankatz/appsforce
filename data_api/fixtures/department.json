@@ -1,0 +1,5 @@
+[
+	{ "model": "data_api.department", "pk": 1, "fields": { "name": "test", "description": "the best department" } },
+	{ "model": "data_api.department", "pk": 2, "fields": { "name": "test2", "description": "" } },
+	{ "model": "data_api.department", "pk": 3, "fields": { "name": "test3", "description": "" } }
+]
