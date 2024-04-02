@@ -2,7 +2,7 @@ databases:
   - name: appsforceyk
     plan: free
     databaseName: appsforceyk
-    user: postgres
+    user: appsforceuser
 
 services:
   - type: web
