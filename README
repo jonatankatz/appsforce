@@ -12,3 +12,18 @@ Browse to http://localhost:8000
 Loading fixtures:
 python manage.py loaddata data_api/fixtures/department.json
 python manage.py loaddata data_api/fixtures/user.json
+
+URLS
+users/read/ - get all users GET
+users/create/ - create user POST
+users/pk/ - read user GET
+users/delete/pk - delete user delete
+users/update/PK - update user patch
+
+departments/read/ - get all departments GET
+departments/create/ - create department POST
+departments/pk/ - read department GET
+departments/delete/pk - delete department delete
+departments/update/PK - update department PATCH
+departments/with_counts - get detailed departments with user counts array
+
