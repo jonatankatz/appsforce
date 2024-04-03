@@ -5,7 +5,7 @@
 		"fields": {
 			"first_name": "yoni",
 			"last_name": "katz",
-			"title": "",
+			"title": "cto",
 			"email": "admin@admin.com",
 			"image": "",
 			"department": 1
@@ -17,7 +17,7 @@
 		"fields": {
 			"first_name": "uriel",
 			"last_name": "katz",
-			"title": "",
+			"title": "ceo",
 			"email": "admin@admin.com2",
 			"image": "",
 			"department": 1
@@ -29,10 +29,88 @@
 		"fields": {
 			"first_name": "Alan",
 			"last_name": "Abeid",
-			"title": "",
+			"title": "developer",
 			"email": "admin2@notraffic.com",
 			"image": "",
 			"department": 2
+		}
+	},
+    	{
+		"model": "data_api.user",
+		"pk": 4,
+		"fields": {
+			"first_name": "shmulik",
+			"last_name": "cohen",
+			"title": "developer",
+			"email": "shmulik@gmail.com",
+			"image": "",
+			"department": 3
+		}
+	},	{
+		"model": "data_api.user",
+		"pk": 4,
+		"fields": {
+			"first_name": "david",
+			"last_name": "levi",
+			"title": "king",
+			"email": "admin3@yahoo.com",
+			"image": "",
+			"department": 1
+		}
+	},	{
+		"model": "data_api.user",
+		"pk": 4,
+		"fields": {
+			"first_name": "shahar",
+			"last_name": "hasson",
+			"title": "some title",
+			"email": "sh@walla.co.il",
+			"image": "",
+			"department": 2
+		}
+	},	{
+		"model": "data_api.user",
+		"pk": 4,
+		"fields": {
+			"first_name": "moshe",
+			"last_name": "gantz",
+			"title": "head of fun",
+			"email": "mshganz@gmail.com",
+			"image": "",
+			"department": 3
+		}
+	},	{
+		"model": "data_api.user",
+		"pk": 4,
+		"fields": {
+			"first_name": "avi",
+			"last_name": "benayun",
+			"title": "qa engenieer",
+			"email": "avibenay@gmail.com",
+			"image": "",
+			"department": 1
+		}
+	},	{
+		"model": "data_api.user",
+		"pk": 4,
+		"fields": {
+			"first_name": "david",
+			"last_name": "wolf",
+			"title": "qa engenieer",
+			"email": "dw@gmail.com",
+			"image": "",
+			"department": 3
+		}
+	},	{
+		"model": "data_api.user",
+		"pk": 4,
+		"fields": {
+			"first_name": "matan",
+			"last_name": "alon",
+			"title": "sales",
+			"email": "mata@gmail.com",
+			"image": "",
+			"department": 1
 		}
 	}
 ]

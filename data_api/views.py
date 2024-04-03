@@ -1,12 +1,35 @@
 from django.db.models import Count
 from django.http import JsonResponse
 from .models import User, Department
-from rest_framework import generics
+from rest_framework import generics,filters
 from rest_framework.response import Response
-import django_filters.rest_framework
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 from .serializers import UserSerializer, DepartmentSerializer
+
+class DepartmentListCreateView(generics.ListCreateAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+class DepartmentDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+    
+class DepartmentUpdateView(generics.RetrieveUpdateAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+    partial = True
+
+class DepartmentDeleteView(generics.DestroyAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.delete()
+        return Response(print("delete department"))
+
 
 class UserListCreateView(generics.ListCreateAPIView):
     queryset = User.objects.all()
@@ -21,10 +44,15 @@ class UserUpdateView(generics.RetrieveUpdateAPIView):
     serializer_class = UserSerializer
     partial = True
 
+# implementing users read with filters
 class AllUserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filter_backends = [DjangoFilterBackend,filters.SearchFilter]
+    filterset_fields = ['first_name','last_name','email','department']
+    search_fields = ['first_name', 'last_name','email','department__name']
+
+
 
 
 class UserDeleteView(generics.DestroyAPIView):
